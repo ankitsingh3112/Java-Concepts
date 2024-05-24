@@ -6,6 +6,7 @@ public class MultiRunnable implements Runnable {
 	
 				try {
 					System.out.println("Thread: "+Thread.currentThread().getId()+" is running");
+					
 				} catch (Exception e) {
 					// TODO: handle exception
 					System.out.println("Exception is caught");

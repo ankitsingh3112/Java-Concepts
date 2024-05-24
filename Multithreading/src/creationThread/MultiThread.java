@@ -10,7 +10,9 @@ public class MultiThread {
 		for(int i=0;i<10;i++) {
 			MultithreadDemo obj=new MultithreadDemo();
 			obj.start();
+			
 		}
+		
 		
 		
 		//System.out.println("***** Thread Creation Using Runnable interface  *********");

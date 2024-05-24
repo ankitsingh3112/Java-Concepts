@@ -1,4 +1,6 @@
-Question: Suppose you go for the internship at GeeksForGeeks, and you were told to write a program to count the number of employees working in the company(excluding interns). To make this program, you have to use the concept of a garbage collector. 
+Question: Suppose you go for the internship at GeeksForGeeks, 
+and you were told to write a program to count the number of employees working in the company(excluding interns).
+ To make this program, you have to use the concept of a garbage collector. 
 
 This is the actual task you were given at the company:
 
