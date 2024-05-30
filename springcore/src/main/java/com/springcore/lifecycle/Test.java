@@ -10,12 +10,19 @@ public class Test {
 		// TODO Auto-generated method stub
 		
 		AbstractApplicationContext context= new ClassPathXmlApplicationContext("com/springcore/lifecycle/lcconfig.xml");
-		Person person=(Person) context.getBean("p1");
+		
 		// Register destroy method
-		context.registerShutdownHook();
+				context.registerShutdownHook();
+				
+		//Person person=(Person) context.getBean("p1");
+		//InterfaceImplOfBeanLifecycle interfaceImpl=(InterfaceImplOfBeanLifecycle)context.getBean("interfaceImpl");
 		
 		
-		System.out.println(person);
+		//System.out.println(person);
+		//System.out.println(interfaceImpl);
+		
+		InterfaceImplUsingAnotations ano=(InterfaceImplUsingAnotations)context.getBean("anoImpl");
+		System.out.println(ano);
 
 	}
 
