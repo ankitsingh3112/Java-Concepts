@@ -7,13 +7,25 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">    
     
+ <context:annotation-config/>  <!-- used to activate all kind of anotations -->
  
- 
- <bean class="com.springcore.lifecycle.Person" name="p1" init-method="shuru" destroy-method="khatam">
+<!--     LifeCycle Impl Using XML
+    <bean class="com.springcore.lifecycle.Person" name="p1" init-method="shuru" destroy-method="khatam">
          <property name="PersonName" value="Ankit Singh"/>
          <property name="age" value="26"/>
          
- </bean> 
+    </bean> 
+  -->
+ 
+ <!--   LifeCycle Impl Using Interface
+ <bean class="com.springcore.lifecycle.InterfaceImplOfBeanLifecycle" name="interfaceImpl">
+        <constructor-arg value="Interface Impl of Bean Life Cycle"/>
+ </bean>
+  -->
+ 
+  <bean class="com.springcore.lifecycle.InterfaceImplUsingAnotations" name="anoImpl">
+        <constructor-arg value="Anotaion..... Impl of Bean Life Cycle"/>
+ </bean>
  
  
  
