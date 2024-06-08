@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+    ">    
+    
+ 
+ <context:annotation-config/>
+ 
+     <!-- standalone list  -->
+ <util:list list-class="java.util.Vector" id="Locations">
+    <value>Delhi</value>
+    <value>Noida</value>
+    <value>Mumbai</value>
+    <value>Faridabad</value>
+ </util:list>
+ 
+    <!-- standalone Map -->
+    
+    <util:map map-class="java.util.HashMap" id="price">
+      <entry key="Delhi" value="2200"/>
+      <entry key="Noida" value="2000"/>
+      <entry key="Mumbai" value="2800"/>
+      <entry key="Faridabad" value="1200"/>
+    </util:map>
+    
+    <!-- Standalone Properties -->
+    <util:properties id="hotel-details">
+      <prop key="StarRating">four Star</prop>
+      <prop key="Property Age">10</prop>
+      <prop key="Own By">Taj Hotels</prop>
+    </util:properties>
+    
+ <bean class="com.springcore.standalone.Hotel" name="hotel">
+         <property name="name" value="Friends And Family Stay"/>
+         <property name="locations" ref="Locations"/>
+         <property name="pricePerDay" ref="price"/>
+         <property name="HotelDeatils" ref="hotel-details"/>
+         
+ </bean> 
+ 
+ 
+ 
+ 
+    
+ </beans>
