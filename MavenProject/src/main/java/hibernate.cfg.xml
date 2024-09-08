@@ -14,6 +14,8 @@
 	         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>  <!-- Specify Lang we use to write DML -->
 	         <property name="hbm2ddl.auto">update</property> <!-- Specify the action on table after change in data i.e will create everytime you compile code table  -->
 	         <property name="show_sql">true</property>
+	         <property name="cache.use_second_level_cache">true</property>
+	         <property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
 	         <mapping class="com.hibernate.Manager"/>
 	     </session-factory>
 	     
